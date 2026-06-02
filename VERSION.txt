@@ -1,16 +1,12 @@
-Mavericks Website — Build v6  (20260602-1213)
+Mavericks Website — Build v7  (20260602-1228)
 =============================================
-About / The Club page — MOBILE FIX:
-Root cause: the lounge image-grid styling (grid layout, borders, image
-sizing AND the zoom transition) was inside the desktop @media block, so on
-mobile the lounge images had no grid, no borders, no spacing, and no
-transition (instant = "harsh" zoom). The Main Floor was unaffected because
-its rules are mobile-first.
-
-Fix: moved the lounge-grid rules to mobile-first base styles —
-  - Mobile: full-width single-column images, matching borders/rounded corners,
-    consistent 14px spacing, and the same .6s soft zoom as the Main Floor.
-  - Desktop: 2-across grid retained (unchanged look).
-
-Now all lounge images behave identically to the Main Floor on both mobile
-and desktop.
+Homepage links fixed:
+- The 5 lounge cards ("Find Out More") now link to the matching section on
+  the About page: Main Floor, VIP Mezzanine, Platinum, Empire, Library
+  (the-club.html#main-floor, #vip-mezzanine, #platinum, #empire, #library).
+- "About the Club" -> the-club.html
+- "View Pricing"    -> pricing.html
+- "View Dining Menu"-> dining-menu.html
+- "View Drinks Menu"-> drinks-menu.html
+- About page: lounge sections given scroll offset so anchor jumps land below
+  the fixed top nav (not hidden behind it).
