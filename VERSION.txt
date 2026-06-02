@@ -1,10 +1,16 @@
-Mavericks Website — Build v4  (20260602-1152)
+Mavericks Website — Build v6  (20260602-1213)
 =============================================
-Change in this build:
-- Tap-to-zoom now works on ALL gallery/feature images on touch devices,
-  matching the Main Floor behaviour. Tap an image to zoom it slightly; tap
-  again (or tap another image) to release. Desktop continues to zoom on hover.
-  Applied site-wide across all 7 pages.
+About / The Club page — MOBILE FIX:
+Root cause: the lounge image-grid styling (grid layout, borders, image
+sizing AND the zoom transition) was inside the desktop @media block, so on
+mobile the lounge images had no grid, no borders, no spacing, and no
+transition (instant = "harsh" zoom). The Main Floor was unaffected because
+its rules are mobile-first.
 
-Includes all prior fixes (v2: nav submenus, add-on prices, Group Experiences;
-v3: lounge image borders, hover zoom, consistent spacing).
+Fix: moved the lounge-grid rules to mobile-first base styles —
+  - Mobile: full-width single-column images, matching borders/rounded corners,
+    consistent 14px spacing, and the same .6s soft zoom as the Main Floor.
+  - Desktop: 2-across grid retained (unchanged look).
+
+Now all lounge images behave identically to the Main Floor on both mobile
+and desktop.
