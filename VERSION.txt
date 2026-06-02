@@ -1,12 +1,7 @@
-Mavericks Website — Build v7  (20260602-1228)
+Mavericks Website — Build v8  (20260602-1239)
 =============================================
-Homepage links fixed:
-- The 5 lounge cards ("Find Out More") now link to the matching section on
-  the About page: Main Floor, VIP Mezzanine, Platinum, Empire, Library
-  (the-club.html#main-floor, #vip-mezzanine, #platinum, #empire, #library).
-- "About the Club" -> the-club.html
-- "View Pricing"    -> pricing.html
-- "View Dining Menu"-> dining-menu.html
-- "View Drinks Menu"-> drinks-menu.html
-- About page: lounge sections given scroll offset so anchor jumps land below
-  the fixed top nav (not hidden behind it).
+Homepage:
+- "Enquire Now" button renamed to "GROUP BOOKINGS" and now links to the
+  Group Experiences page (experiences.html).
+- "Book a Table" buttons (hero + menu) now open the DinePlan booking widget:
+  https://account.dineplan.com/widget/v3/frame/x9zV6Gj1  (opens in new tab)
