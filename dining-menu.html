@@ -159,7 +159,7 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
 .menu-chevron { color:var(--color-gold);font-size:10px;opacity:.5;transition:transform .3s ease;flex-shrink:0; }
 .menu-item.expanded .menu-chevron { transform:rotate(180deg); }
 .submenu { max-height:0;overflow:hidden;transition:max-height .32s ease;background:rgba(201,164,107,0.025); }
-.menu-item.expanded .submenu { max-height:280px; }
+.menu-item.expanded .submenu { max-height:360px; }
 .submenu a {
   display:block;padding:10px var(--container) 10px 56px;
   font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-muted);
@@ -506,7 +506,7 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
     max-height:0 !important;transition:max-height .3s ease;
     border-radius:0 0 var(--radius-sm) var(--radius-sm);
   }
-  .menu-item:hover .submenu { max-height:280px !important; }
+  .menu-item:hover .submenu { max-height:360px !important; }
   .submenu a { padding:11px 18px;font-size:9px; }
   .menu-bottom { display:none; }
   .menu-social { display:none; }
@@ -873,7 +873,7 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
 .menu-subcat:first-of-type { margin-top:0; }
 
 /* MENU ITEM ROW */
-.menu-item {
+.menu-section .menu-item {
   display:flex;align-items:flex-start;justify-content:space-between;
   gap:var(--space-md);
   padding:var(--space-md) 0;
@@ -881,8 +881,8 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
   transition:padding-left .2s ease;
   cursor:default;
 }
-.menu-item:last-child { border-bottom:none; }
-.menu-item:hover { padding-left:6px; }
+.menu-section .menu-item:last-child { border-bottom:none; }
+.menu-section .menu-item:hover { padding-left:6px; }
 
 .menu-item-info { flex:1; }
 .menu-item-name {
@@ -925,13 +925,13 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
 }
 .addon-row {
   display:flex;align-items:center;justify-content:space-between;
-  padding:10px var(--space-sm);
-  background:var(--color-panel);gap:10px;
+  padding:9px 10px;
+  background:var(--color-panel);gap:8px;
   transition:background .2s;
 }
 .addon-row:hover { background:var(--color-charcoal); }
-.addon-name { font-size:13px;color:var(--color-muted); }
-.addon-price { font-family:var(--font-heading);font-size:16px;color:var(--color-gold); }
+.addon-name { font-size:12px;color:var(--color-muted);line-height:1.3; }
+.addon-price { font-family:var(--font-heading);font-size:14px;color:var(--color-gold);white-space:nowrap;flex-shrink:0; }
 
 /* NOTICE */
 .menu-notice {
@@ -1075,8 +1075,8 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
 .menu-section:first-child { border-top:none; }
 
 /* ── ADD ONS — larger font ── */
-.addon-name { font-size:14px;color:var(--color-muted); }
-.addon-price { font-family:var(--font-heading);font-size:17px;color:var(--color-gold); }
+.addon-name { font-size:12.5px;color:var(--color-muted);line-height:1.3; }
+.addon-price { font-family:var(--font-heading);font-size:15px;color:var(--color-gold);white-space:nowrap;flex-shrink:0; }
 
 /* ── MULTI-PRICE — prevent narrow phone wrapping ── */
 .menu-item-prices { flex-shrink:0;min-width:70px;text-align:right; }
@@ -1113,6 +1113,9 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
   transform:translateY(-2px);
 }
 
+
+/* tap-to-zoom: mobile parity with hover */
+.featured-event-img.tapped img,.event-card-img.tapped img,.menu-banner.tapped img,.feat-img.tapped img,.upcoming-card.tapped img,.exp-image.tapped img,.explore-card-img.tapped img,.photo-strip-img.tapped img,.lounge-img.tapped img,.main-gallery-item.tapped img,.lext-fr.tapped img{transform:scale(1.05);}
 </style>
 </head>
 <body>
@@ -1144,7 +1147,7 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
             <span class="menu-chevron">&#8964;</span>
           </div>
           <div class="submenu">
-            <a href="the-club.html">About the Club</a><a href="pricing.html">Pricing</a>
+            <a href="the-club.html">About the Club</a><a href="pricing.html">Pricing</a><a href="experiences.html">Group Experiences</a>
             <a href="membership.html">Membership</a><a href="events.html">News</a><a href="pricing.html">FAQs</a>
           </div>
         </li>
@@ -1786,6 +1789,17 @@ document.querySelectorAll('.menu-nav-pill').forEach(pill => {
   });
 });
 
+
+// Tap-to-zoom on touch devices (parity with desktop hover)
+if(window.matchMedia&&window.matchMedia('(hover: none)').matches){
+  var ZSEL='.featured-event-img,.event-card-img,.menu-banner,.feat-img,.upcoming-card,.exp-image,.explore-card-img,.photo-strip-img,.lounge-img,.main-gallery-item,.lext-fr';
+  document.addEventListener('click',function(e){
+    var fr=e.target.closest(ZSEL);
+    var was=fr&&fr.classList.contains('tapped');
+    document.querySelectorAll(ZSEL).forEach(function(f){f.classList.remove('tapped');});
+    if(fr&&!was)fr.classList.add('tapped');
+  },{passive:true});
+}
 </script>
 </body>
 </html>
