@@ -1,12 +1,7 @@
-Mavericks Website — Build v65  (20260609-0416)
+Mavericks Website — Build v76  (20260609-1101)
 =============================================
-Navigation & homepage:
-- Mobile menu (all pages): the "Book a Table" item is now "Get in Touch"
-  and links to the contact page (get-in-touch.html). On most pages this
-  was previously a non-working button; it's now a working link sitewide.
-- Homepage hero banner: the "Book a Table" button is now "Get in Touch",
-  linking to get-in-touch.html.
-
-Note: the dedicated "Book a Table" buttons elsewhere (Dining/Drinks menu
-heroes, About the Club Main Floor, Contact page) still link to the DinePlan
-booking widget and were left unchanged.
+Become a Dancer page:
+- Tightened the stat-box subtitles (e.g. "Monthly Earning Potential"). They were
+  inheriting a tall line-height, leaving a blank line between each wrapped word;
+  set a tight line-height and slightly smaller size so the words sit close
+  together like the homepage stats.

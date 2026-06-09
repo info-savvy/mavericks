@@ -851,9 +851,8 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
 }
 .page-hero-content { position:relative;z-index:2;animation:fadeUp 0.9s ease 0.2s both; }
 .page-hero-content h1 { font-size:clamp(32px,8vw,64px);margin-top:var(--space-xs); }
-.hero-cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--space-md);}
-.hero-cta-row .btn{min-width:150px;}
-@media(max-width:420px){.hero-cta-row .btn{flex:1;min-width:0;padding:0 12px;}}
+.menu-cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:var(--space-lg) 0 var(--space-lg);}
+.menu-cta-row .btn{flex:1;min-width:140px;white-space:nowrap;padding:0 16px;}
 
 /* STICKY NAV */
 .menu-nav {
@@ -1113,10 +1112,6 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
   <div class="page-hero-content">
     <span class="eyebrow">Fine Spirits &amp; Wine</span>
     <h1>Drinks Menu</h1>
-    <div class="hero-cta-row">
-      <a href="https://account.dineplan.com/widget/v3/frame/x9zV6Gj1" target="_blank" rel="noopener" class="btn btn-primary">Book a Table</a>
-      <a href="get-in-touch.html" class="btn btn-secondary">Get in Touch</a>
-    </div>
   </div>
 </section>
 
@@ -1137,7 +1132,12 @@ p  { font-size:15px;color:var(--color-muted);margin:0;line-height:1.7; }
   <div class="page-inner">
 
     <!-- ══ CHAMPAGNE ══ -->
-    <section class="menu-section reveal" id="champagne">
+        <div class="menu-cta-row">
+      <a href="https://account.dineplan.com/widget/v3/frame/x9zV6Gj1" target="_blank" rel="noopener" class="btn btn-primary">Book a Table</a>
+      <a href="get-in-touch.html" class="btn btn-secondary">Get in Touch</a>
+    </div>
+
+<section class="menu-section reveal" id="champagne">
       <div class="menu-cat">Bubbly</div>
       
       <span class="menu-subcat">Champagne</span>

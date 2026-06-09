@@ -1042,15 +1042,16 @@ html{scroll-behavior:smooth;}
 .bad-hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(5,5,5,.55) 0%,rgba(5,5,5,.25) 40%,rgba(5,5,5,.92) 100%);}
 .bad-hero-inner{position:relative;padding:var(--nav-h) var(--space-md) var(--space-xl);max-width:760px;}
 .bad-hero h1{font-family:var(--font-heading);font-weight:400;color:var(--color-white);text-transform:uppercase;line-height:1.02;font-size:clamp(40px,12vw,88px);margin:8px 0 14px;letter-spacing:.01em;}
-.bad-hero h1 em{font-style:italic;color:var(--color-gold);}
+.bad-hero h1 em{font-style:italic;color:var(--color-gold);text-shadow:0 2px 10px rgba(0,0,0,.9),0 0 2px rgba(0,0,0,.7);}
 .bad-lead{color:rgba(255,255,255,.86);font-size:clamp(15px,4.4vw,18px);line-height:1.7;max-width:560px;margin-bottom:var(--space-md);}
 .bad-hero-btns{display:flex;flex-wrap:wrap;gap:12px;}
 /* STATS */
-.bad-stats{background:var(--color-gold);color:var(--color-black);}
-.bad-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;}
-.bad-stat{padding:var(--space-md) var(--space-sm);text-align:center;border-right:1px solid rgba(0,0,0,.14);border-bottom:1px solid rgba(0,0,0,.14);}
+.bad-stats{background:linear-gradient(135deg,#7a3d1a,#c3784b 50%,#9a5a2e);color:var(--color-white);}
+.bad-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.bad-stat{padding:var(--space-md) 8px;text-align:center;border-right:1px solid rgba(0,0,0,.14);}
+.bad-stat:last-child{border-right:none;}
 .bad-stat-n{display:block;font-family:var(--font-heading);font-size:clamp(22px,6vw,30px);line-height:1;margin-bottom:6px;}
-.bad-stat-l{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:.8;}
+.bad-stat-l{display:block;font-size:8.5px;letter-spacing:.12em;line-height:1.35;text-transform:uppercase;font-weight:700;opacity:.8;}
 /* SECTION shell */
 .bad-wrap{padding:var(--space-xl) var(--space-md);max-width:1080px;margin:0 auto;}
 .bad-ey{display:block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--color-gold);font-weight:700;margin-bottom:12px;}
@@ -1127,6 +1128,32 @@ html{scroll-behavior:smooth;}
 
 .bad-dwu{display:block;line-height:0;aspect-ratio:1200/588;overflow:hidden;}
 .bad-dwu img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* Social icons above 2nd Apply Now */
+.bad-social-icons{display:flex;justify-content:center;gap:30px;margin:0 0 var(--space-xl);}
+.bad-social-icons a{display:inline-flex;color:var(--color-gold);transition:color .25s,transform .25s;}
+.bad-social-icons a:hover{color:#fff;transform:translateY(-2px);}
+.bad-social-icons svg{width:34px;height:34px;}
+
+/* Light gold "Choose File" button */
+.bad-file input::file-selector-button,
+.bad-file input::-webkit-file-upload-button{
+  background:#e6cf9a;color:#1a1a1a;border:none;border-radius:6px;
+  padding:9px 16px;margin-right:12px;font-family:var(--font-body);
+  font-size:12px;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  transition:background .25s;
+}
+.bad-file input::file-selector-button:hover,
+.bad-file input::-webkit-file-upload-button:hover{background:#f0deb2;}
+
+/* Submit button: always one line, full width on mobile */
+.bad-submit{white-space:nowrap;}
+@media(max-width:767px){ .bad-submit{width:100%;max-width:none;} }
+
+/* Read More toggle (The Essentials) */
+.bad-readmore{color:var(--color-gold);text-decoration:none;font-weight:400;white-space:nowrap;cursor:pointer;margin-left:4px;}
+.bad-readmore:hover{text-decoration:underline;}
+.rm-rest[hidden]{display:none;}
 </style>
 </head>
 <body>
@@ -1215,7 +1242,6 @@ html{scroll-behavior:smooth;}
   <div class="bad-hero-inner">
     <span class="bad-ey">Dancers Wanted &middot; Cape Town, South Africa</span>
     <h1>Dance With Us in <em>Cape&nbsp;Town</em></h1>
-    <p class="bad-lead">Mavericks is looking for experienced dancers from Europe and beyond. If you&rsquo;re ready to hop on a plane, we&rsquo;ll give you fun, adventure, world-class facilities &mdash; and the chance to earn <strong style="color:#fff;">$7,000&ndash;$9,000 a month</strong>.</p>
     <div class="bad-hero-btns">
       <a href="#apply" class="btn btn-primary" style="max-width:240px;">Apply Now</a>
       <a href="#why" class="btn cta-btn-ghost" style="max-width:240px;">Why Cape Town?</a>
@@ -1237,7 +1263,7 @@ html{scroll-behavior:smooth;}
         <h3>Luxury Stage &amp; High Earnings</h3>
         <p>Earn $7,000&ndash;$9,000 USD a month at a sophisticated, upmarket gentlemen&rsquo;s club with a diverse, affluent clientele &mdash; locals, international visitors and vacationing high-rollers. Excellent facilities, professional training and the chance to dance for the wealthiest Capetonians and business travellers.</p>
         <h3>Tourism Beyond the Dancefloor</h3>
-        <p>Cape Town is consistently named one of the world&rsquo;s top holiday destinations &mdash; year-round sunshine, buzzing nightlife, iconic Table Mountain, scenic vineyards and stunning beaches. It&rsquo;s the perfect escape from the European winter, and the chance to combine work with an unforgettable adventure.</p>
+        <p>Cape Town is consistently named the world&rsquo;s top holiday destination &mdash; year-round sunshine, buzzing nightlife, iconic Table Mountain, scenic vineyards and stunning beaches. It&rsquo;s the perfect escape from the European winter, and the chance to combine work with an unforgettable adventure.</p>
       </div>
     </div>
   </div>
@@ -1271,6 +1297,14 @@ html{scroll-behavior:smooth;}
   <div class="bad-cards"><div class="bad-card reveal"><span class="bad-card-n">01</span><h3>High, Reliable Earnings</h3><p>Average $7,000&ndash;$9,000 a month dancing for a discerning, affluent crowd &mdash; with training and support to help you make the most of every night.</p></div><div class="bad-card reveal"><span class="bad-card-n">02</span><h3>Safe &amp; Secure</h3><p>Your wellbeing comes first: 24-hour security, controlled access and CCTV at both the club and your apartment, which is right next door.</p></div><div class="bad-card reveal"><span class="bad-card-n">03</span><h3>A Home From Home</h3><p>Modern, fully-furnished apartments steps from the club, with housekeeping, fast internet, and a rooftop pool deck with views of Table Mountain.</p></div><div class="bad-card reveal"><span class="bad-card-n">04</span><h3>Looked After From Day One</h3><p>A friendly House Manager welcomes you, helps you settle in, sorts your SIM card, shows you around the city and introduces you to the other dancers.</p></div><div class="bad-card reveal"><span class="bad-card-n">05</span><h3>Training &amp; Styling</h3><p>A resident hairdresser, choreographer and stage manager help you look and perform your absolute best on our world-class stages.</p></div><div class="bad-card reveal"><span class="bad-card-n">06</span><h3>No Agency Fees</h3><p>Apply directly to us and hear back within 48 hours. We never charge agency fees &mdash; the opportunity is yours.</p></div></div>
 </div></div>
 <div class="page-body" style="background:var(--color-black);"><div class="bad-wrap" style="text-align:center;">
+  <div class="bad-social-icons">
+    <a href="https://www.tiktok.com/@maverickscapetown?lang=en" target="_blank" rel="noopener" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.86 4.86 0 01-1.01-.08z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/maverickscapetown/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+    </a>
+  </div>
   <a href="#apply" class="btn btn-primary" style="max-width:240px;">Apply Now</a>
 </div></div>
 <div class="page-body bad-sec" id="accommodation" style="background:var(--color-charcoal);"><div class="bad-wrap">
@@ -1335,7 +1369,7 @@ html{scroll-behavior:smooth;}
         <p class="bad-note">Please attach a recent, full-body photo wearing lingerie or a costume (max 25MB). Applications without a photo will not be considered.</p>
       </div>
       <div class="bad-fg"><label class="bad-lab">Your Message</label><textarea class="bad-ta" name="message" placeholder="Anything you&rsquo;d like us to know?"></textarea></div>
-      <button type="submit" class="btn btn-primary" style="margin-top:6px;">Send My Application</button>
+      <button type="submit" class="btn btn-primary bad-submit" style="margin-top:6px;">Send My Application</button>
       <p class="bad-note" style="text-align:center;">We wish you luck &mdash; and, if successful, we can&rsquo;t wait to welcome you to Mavericks Revue Bar.</p>
     </form>
   </div>
@@ -1450,6 +1484,34 @@ function submitDancer(e){
     '<p style="color:var(--color-muted);line-height:1.8;max-width:480px;margin:0 auto;">Your application has been received. Our team will be in touch within 48 hours. We can&rsquo;t wait to meet you &mdash; see you in Cape Town!</p></div>';
   f.scrollIntoView({behavior:'smooth',block:'center'});
 }
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.bad-term p').forEach(function(p){
+    var full = p.innerHTML.trim();
+    var m = full.match(/[.!?](\s|$)/);          // end of first sentence
+    if(!m) return;
+    var idx = m.index;
+    var lead = full.slice(0, idx + 1).trim();
+    var rest = full.slice(idx + 1).trim();
+    if(!rest) return;                            // only one sentence
+    p.innerHTML = '<span class="rm-lead">'+lead+'</span>'
+                + '<span class="rm-rest" hidden> '+rest+'</span>'
+                + '<a href="#" class="bad-readmore">Read More&hellip;</a>';
+    var link = p.querySelector('.bad-readmore');
+    var restEl = p.querySelector('.rm-rest');
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      if(restEl.hasAttribute('hidden')){
+        restEl.removeAttribute('hidden');
+        link.textContent = 'Read Less';
+      } else {
+        restEl.setAttribute('hidden','');
+        link.innerHTML = 'Read More&hellip;';
+      }
+    });
+  });
+})();
 </script>
 </body>
 </html>
