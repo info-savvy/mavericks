@@ -1,7 +1,12 @@
-Mavericks Website — Build v8  (20260602-1239)
+Mavericks Website — Build v65  (20260609-0416)
 =============================================
-Homepage:
-- "Enquire Now" button renamed to "GROUP BOOKINGS" and now links to the
-  Group Experiences page (experiences.html).
-- "Book a Table" buttons (hero + menu) now open the DinePlan booking widget:
-  https://account.dineplan.com/widget/v3/frame/x9zV6Gj1  (opens in new tab)
+Navigation & homepage:
+- Mobile menu (all pages): the "Book a Table" item is now "Get in Touch"
+  and links to the contact page (get-in-touch.html). On most pages this
+  was previously a non-working button; it's now a working link sitewide.
+- Homepage hero banner: the "Book a Table" button is now "Get in Touch",
+  linking to get-in-touch.html.
+
+Note: the dedicated "Book a Table" buttons elsewhere (Dining/Drinks menu
+heroes, About the Club Main Floor, Contact page) still link to the DinePlan
+booking widget and were left unchanged.
